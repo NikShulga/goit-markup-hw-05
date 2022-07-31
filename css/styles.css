@@ -107,7 +107,7 @@ img {
   background-color: var(--text-title);
   border-radius: 4px;
   opacity: 1;
-  transition: transform 400ms ease-in-out 200ms, opacity 400ms ease-in-out 200ms;
+  transition: transform var(--transition), opacity var(--transition);
 }
 
 .backdrop.is-hidden .modal {
@@ -411,9 +411,9 @@ img {
   gap: 10px;
 }
 
-.team-icon {
+/* .team-icon {
   transition: fill var(--transition);
-}
+} */
 
 .social-link {
   display: flex;
@@ -424,7 +424,7 @@ img {
   background-color: var(--text-title);
   border-radius: 50%;
   fill: var(--icon-color);
-  transition: background-color var(--transition);
+  transition: background-color var(--transition), fill var(--transition);
   /* outline: 1px solid red; */
 }
 
@@ -544,10 +544,11 @@ img {
   padding: 63px 24px;
   transform: translateY(100%);
   background-color: rgba(33, 150, 243, 0.9);
-  transition: transform var(--transition); */
+  transition: transform var(--transition), opacity var(--transition);
 }
 
-.portfolio-link:hover .overlay-text {
+.portfolio-link:hover .overlay-text,
+.portfolio-link:focus .overlay-text {
   transform: translateY(0);
   opacity: 1;
 }
